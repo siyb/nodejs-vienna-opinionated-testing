@@ -1,0 +1,25 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "example test cases",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "test",
+    "example"
+  ],
+  "author": "Patrick Sturm <p.sturm@sphericalelephant.com> (https://sphericalelephant.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "sinon": "^2.2.0",
+    "supertest": "^3.0.0",
+    "validator": "^7.0.0"
+  },
+  "dependencies": {
+    "rewire": "^2.5.2",
+    "uuid": "^3.0.1"
+  }
+}
