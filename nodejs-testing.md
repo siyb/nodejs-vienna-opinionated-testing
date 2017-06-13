@@ -33,6 +33,8 @@ sudo npm install mocha -g
 npm install mocha --save-dev
 ```
 
+* pro tip: you can pass command line arguments to npm scripts like this ```npm test -- -g "test"```
+
 ## Testing With Mocha - Basic Methods
 
 * **describe** - starts a block and expects a string describing the suite and an empty callback containing the block. Can be nested. Use this to create testsuits and subsuites.
