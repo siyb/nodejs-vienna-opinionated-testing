@@ -6,7 +6,9 @@
 const productBehaviour = require('./example3-behaviour.test');
 
 describe('SharedBehaviour', function () {
-    beforeEach(function (done) { // using arrow style functions is not ok here!
+    // using arrow style functions is not ok here, tests in
+    // shared behaviour that rely on the context will fail!
+    beforeEach(function (done) {
         this.product = {
             price: 1
         };
