@@ -27,6 +27,12 @@
 sudo npm install mocha -g
 ```
 
+* alternativly, you can add mocha as a test dependency and use an npm test script to start it using: ```npm test```
+
+```bash
+npm install mocha --save-dev
+```
+
 ## Testing With Mocha - Basic Methods
 
 * **describe** - starts a block and expects a string describing the suite and an empty callback containing the block. Can be nested. Use this to create testsuits and subsuites.
@@ -106,6 +112,21 @@ const expect = require('chai').expect
     * ***not*** can be used to negate the chain and yield the opposite result.
     * the ***deep*** flag can be used to toggle deep assertions of objects.
     * the ***any*** and ***all*** flags are used in conjunction with the key assertion.
+
+## Asserting Ourselves! - Quick comparison
+
+```javascript 
+i.should.be.a('better person');
+```
+very human, but also very invasive, BDD style API.
+```javascript 
+expect(i).to.equal('better person);
+```
+slightly less human, not invasive, BDD style API.
+```javascript
+assert.equal(i, 'better person');
+```
+every day assertions ;), not very human, not invasive.
 
 # Example 4 - "Assertions"
 
