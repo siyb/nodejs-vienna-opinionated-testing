@@ -192,7 +192,7 @@ expect(console.called).to.be.true;
 const sinon = require('sinon');
 
 // anon function
-const callback = sinon.mock().;
+const callback = sinon.mock();
 myTestFunction(callback);
 mock.verify();
 
