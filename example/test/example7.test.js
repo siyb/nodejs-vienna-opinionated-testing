@@ -39,7 +39,8 @@ describe('Rewire', () => {
     });
     it('should send out emails', done => {
         // we need to set "send" here because we need to access the instance for verification reasons,
-        // __with__ does not work in this case!
+        // __with__ does not work in this case, since a call to toTest.__get__('send') would not return
+	// the mock created in the __with__ block.
         const oldSend = toTest.__get__('send');
         toTest.__set__('send', sinon.stub());
 
