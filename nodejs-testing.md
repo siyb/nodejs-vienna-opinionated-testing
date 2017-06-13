@@ -234,7 +234,12 @@ const toTest = rewire('./to-test');
 
 ## Testing Private API - Limitations
 
-* There are several limitiations to private API testing, most notably, the incapability to monkey patch const values and issues with transpilers like babel.
+* const can't be monkeypatch (duh...)
+* issues with transpilers
+* no rewiring of variables inside functions
+* does not work on modules that export primitives (duh...)
+* globals with invalid variable names are ignored, global object and eval cannot be rewired
+* not hot rewiring (i.e. rewire(myObject))
 
 # Example 7 - "Rewire"
 
